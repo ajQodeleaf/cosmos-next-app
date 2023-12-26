@@ -67,7 +67,6 @@ export const WalletCardSection = ({ chainName }: { chainName: string }) => {
         setActiveAccountBalance(balance.amount);
         const signingStargateClient = await getSigningStargateClient();
         setSigningStargateClient(signingStargateClient);
-        console.log("Set clients");
       })();
     }
   }, [address,status]);

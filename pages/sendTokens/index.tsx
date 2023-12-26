@@ -23,7 +23,6 @@ export default function SendTokensPage() {
     try {
       setIsLoading(true);
       const amount = Math.floor(Number(transferAmount * 10 ** 6)).toString();
-      console.log(signingStargateClient);
 
       const result = await signingStargateClient.sendTokens(
         activeAccount,
@@ -35,7 +34,6 @@ export default function SendTokensPage() {
         }
       );
 
-      console.log("Transfer result:", result);
       setIsLoading(false);
     } catch (error) {
       console.error("Error transferring tokens:", error);

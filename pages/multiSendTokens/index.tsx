@@ -58,8 +58,6 @@ const MultiSendTokensPage: React.FC = () => {
         };
       });
 
-      console.log(activeAccount, messages, signingStargateClient);
-
       const result = await signingStargateClient.signAndBroadcast(
         activeAccount,
         messages,
@@ -69,7 +67,7 @@ const MultiSendTokensPage: React.FC = () => {
         },
         "Multi send"
       );
-      console.log("Transfer result:", result);
+      
     } catch (error) {
       console.error("Error transferring tokens:", error);
     }
